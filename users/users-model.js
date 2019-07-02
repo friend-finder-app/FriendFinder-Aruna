@@ -1,4 +1,4 @@
-const db=require('../database/dbConfig.js')
+const db = require('../database/dbConfig.js')
 
 module.exports = {
     add,
@@ -7,24 +7,24 @@ module.exports = {
     getUsers
 }
 
-async function add(user){
+async function add(user) {
     const [id] = await db('users').insert(user)
 
     return findById(id)
 }
 
-function findById(id){
+function findById(id) {
     return db('users')
-    .where({id})
-    .first()
+        .where({ id })
+        .first()
 }
 
-function findBy(filter){
+function findBy(filter) {
     return db('users')
-    .where(filter)
+        .where(filter)
 }
 
-function getUsers(){
+function getUsers() {
     return db('users')
 }
 

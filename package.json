@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/friend-finder-app/FriendFinder-Aruna#readme",
   "dependencies": {
+    "@google/maps": "^0.5.5",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
